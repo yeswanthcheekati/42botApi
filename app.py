@@ -68,7 +68,7 @@ def get_job_listings():
 
 def get_services():
     url = 'https://www.42hertz.com/services/'
-    page = urllib2.urlopen(url)
+    page = urlopen(url)
     soup = BeautifulSoup(page,'lxml')
     services = soup.find_all(None,{'class':'heading-int uppercase '})
     service = []
