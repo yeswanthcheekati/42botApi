@@ -102,7 +102,7 @@ def processRequest(req):
     if req["result"]["action"] == "get_people":
         data = get_people()
     if req["result"]["action"] == "get_service":
-        data = "get_service"
+        data = get_services()
     return data
 
 def makeWebhookResult(data):
