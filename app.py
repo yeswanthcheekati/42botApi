@@ -74,7 +74,8 @@ def get_services():
     service = []
     for element in services:
         service.append(element.text)
-    return '\r\n'.join(service)
+    temp = '\r\n'.join(service)
+    return temp
 
 def get_people():
     url = 'https://www.42hertz.com/about-us/'
@@ -101,7 +102,7 @@ def processRequest(req):
     if req["result"]["action"] == "get_people":
         data = get_people()
     if req["result"]["action"] == "get_service":
-        data = get_services()
+        data = "get_service"
     return data
 
 def makeWebhookResult(data):
