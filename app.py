@@ -2,9 +2,7 @@ from __future__ import print_function
 from future.standard_library import install_aliases
 install_aliases()
 
-from urllib.parse import urlparse, urlencode
-from urllib.request import urlopen, Request
-from urllib.error import HTTPError
+from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
 import simplejson as json
@@ -105,14 +103,6 @@ def processRequest(req):
         data = get_services()
     return data
 
-def makeWebhookResult(data):
-    return {
-        "speech": data,
-        "displayText": data,
-        # "data": data,
-        # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
-    }
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
