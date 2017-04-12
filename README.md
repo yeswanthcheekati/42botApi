@@ -1,6 +1,6 @@
 # Api.ai - sample webhook implementation in Python
 
-This is a webhook implementation that gets Api.ai classification JSON (i.e. a JSON output of Api.ai /query endpoint) and returns a fulfillment response by scraping the necessary data from the 42hertz website.
+This is a webhook implementation that gets Api.AI query response and returns a corresponding response by scraping the necessary data from the 42hertz website.
 
 The app has been deployed to heroku. API.AI accepts only public urls, so local hosts will not be supported The data flows as:
 
